@@ -1,0 +1,83 @@
+DATA:
+  data_root: data/scannet_3d
+  data_root_2d_fused_feature: data/scannet_multiview_openseg
+  feature_2d_extractor: openseg
+  classes: 20
+  aug: True
+  voxel_size: 0.02
+  voxel_max: 120000
+  voxel_max_val: 120000
+  input_color: True
+  use_shm: False
+
+Strat:
+  arch: stratified_transformer
+  stem_transformer: True
+  # use_xyz: True
+  # sync_bn: True  # adopt sync_bn or not
+  rel_query: True
+  rel_key: True
+  rel_value: True
+  quant_size: 0.01
+  downsample_scale: 8
+  num_layers: 4 
+  patch_size: 1 
+  window_size: 4
+  depths: [2, 2, 6, 2] 
+  channels: [48, 96, 192, 384] 
+  num_heads: [3, 6, 12, 24] 
+  up_k: 3
+  drop_path_rate: 0.3
+  concat_xyz: True
+  grid_size: 0.04
+  max_batch_points: 250000
+  max_num_neighbors: 34 # For KPConv
+  ratio: 0.25
+  k: 16
+
+DISTILL:
+  weight_decay: 0.01
+  ignore_label: 255
+  train_gpu: [0,1,2,3]
+  workers: 8  # data loader workers
+  batch_size: 4  # batch size for training, 1 per gpu
+  batch_size_val: 1  # batch size for validation during training, memory and speed tradeoff
+  base_lr: 0.0001
+  loss_type: cosine # l1 | cosine
+  loop: 1
+  epochs: 100
+  start_epoch: 0
+  power: 0.9
+  momentum: 0.9
+  manual_seed: 1463
+  print_freq: 10
+  save_freq: 1
+  save_path:
+  resume:
+  evaluate: True  # evaluate on validation set, extra gpu memory needed and small batch_size_val is recommend
+  eval_freq: 1
+  use_amp: True
+
+TEST:
+  split: val  # split in [train, val]
+  prompt_eng: True
+  mark_no_feature_to_unknown: True
+  feature_type: 'ensemble' # 'distill' | 'fusion' | 'ensemble'
+  save_feature_as_numpy: False
+  vis_input: False
+  vis_pred: False
+  vis_gt: False
+  test_workers: 8
+  test_gpu: [0]
+  test_batch_size: 1
+  test_repeats: 5
+  model_path:
+  save_folder:
+  vis: 0
+
+Distributed:
+  dist_url: tcp://127.0.0.1:6787
+  dist_backend: 'nccl'
+  multiprocessing_distributed: True
+  world_size: 1
+  rank: 0
