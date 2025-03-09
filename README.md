@@ -17,7 +17,7 @@
     ·
     <a href="https://sergebelongie.github.io/"><strong>Serge Belongie</strong></a>
   </p>
-  <h2 align="center">ICLR 2025 Spotlight (<a href="https://arxiv.org/abs/2410.22489">Paper</a>)</h2>
+  <h2 align="center">ICLR 2025 Spotlight (<a href="https://arxiv.org/pdf/2410.22489">Paper</a>)</h2>
 </p>
 
 <p align="center">
