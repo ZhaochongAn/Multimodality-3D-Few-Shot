@@ -161,19 +161,19 @@ If you find our code or paper useful, please cite:
 
 
 ```bibtex
-@article{an2025generalized,
+@inproceedings{an2025generalized,
   title={Generalized Few-shot 3D Point Cloud Segmentation with Vision-Language Model},
   author={An, Zhaochong and Sun, Guolei and Liu, Yun and Li, Runjia and Han, Junlin and Konukoglu, Ender and Belongie, Serge},
-  journal={arXiv preprint arXiv:2503.16282},
+  booktitle={CVPR},
   year={2025}
 }
 
-@article{an2024multimodality,
+@inproceedings{an2024multimodality,
     title={Multimodality Helps Few-Shot 3D Point Cloud Semantic Segmentation},
     author={An, Zhaochong and Sun, Guolei and Liu, Yun and Li, Runjia and Wu, Min 
             and Cheng, Ming-Ming and Konukoglu, Ender and Belongie, Serge},
-    journal={arXiv preprint arXiv:2410.22489},
-    year={2024}
+    booktitle={ICLR},
+    year={2025}
 }
 
 @inproceedings{an2024rethinking,
