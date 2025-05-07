@@ -32,6 +32,36 @@ We introduce:
 - Superior performance on novel class generalization through effective multimodal integration
 - Valuable insights into the importance of commonly-ignored free modalities in FS-PCS
 
+## 📝 Citation
+If you find our code or paper useful, please cite:
+
+
+```bibtex
+@inproceedings{an2025generalized,
+  title={Generalized Few-shot 3D Point Cloud Segmentation with Vision-Language Model},
+  author={An, Zhaochong and Sun, Guolei and Liu, Yun and Li, Runjia and Han, Junlin and Konukoglu, Ender and Belongie, Serge},
+  booktitle={CVPR},
+  year={2025}
+}
+
+@inproceedings{an2024multimodality,
+    title={Multimodality Helps Few-Shot 3D Point Cloud Semantic Segmentation},
+    author={An, Zhaochong and Sun, Guolei and Liu, Yun and Li, Runjia and Wu, Min 
+            and Cheng, Ming-Ming and Konukoglu, Ender and Belongie, Serge},
+    booktitle={ICLR},
+    year={2025}
+}
+
+@inproceedings{an2024rethinking,
+  title={Rethinking Few-shot 3D Point Cloud Semantic Segmentation},
+  author={An, Zhaochong and Sun, Guolei and Liu, Yun and Liu, Fayao and Wu, Zongwei and Wang, Dan and Van Gool, Luc and Belongie, Serge},
+  booktitle={Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition},
+  pages={3996--4006},
+  year={2024}
+}
+```
+---
+
 ## 🛠️ Environment Setup
 
 Our environment has been tested on:
@@ -156,34 +186,8 @@ Follow [COSeg visualization guide](https://github.com/ZhaochongAn/COSeg?tab=read
 | sc1_2w1s | ScanNet | 1 | 2-way 1-shot | [Download](https://drive.google.com/drive/u/1/folders/1y_OVENsKy5RbeJ77CuwdJKXMbO_ZdtBx) |
 | sc1_2w5s | ScanNet | 1 | 2-way 5-shot | [Download](https://drive.google.com/drive/u/1/folders/189HZgypuF9KWEVZ3tPW4bJ4QU1jk-2f-) |
 
-## 📝 Citation
-If you find our code or paper useful, please cite:
 
-
-```bibtex
-@inproceedings{an2025generalized,
-  title={Generalized Few-shot 3D Point Cloud Segmentation with Vision-Language Model},
-  author={An, Zhaochong and Sun, Guolei and Liu, Yun and Li, Runjia and Han, Junlin and Konukoglu, Ender and Belongie, Serge},
-  booktitle={CVPR},
-  year={2025}
-}
-
-@inproceedings{an2024multimodality,
-    title={Multimodality Helps Few-Shot 3D Point Cloud Semantic Segmentation},
-    author={An, Zhaochong and Sun, Guolei and Liu, Yun and Li, Runjia and Wu, Min 
-            and Cheng, Ming-Ming and Konukoglu, Ender and Belongie, Serge},
-    booktitle={ICLR},
-    year={2025}
-}
-
-@inproceedings{an2024rethinking,
-  title={Rethinking Few-shot 3D Point Cloud Semantic Segmentation},
-  author={An, Zhaochong and Sun, Guolei and Liu, Yun and Liu, Fayao and Wu, Zongwei and Wang, Dan and Van Gool, Luc and Belongie, Serge},
-  booktitle={Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition},
-  pages={3996--4006},
-  year={2024}
-}
-```
+## Contact
 
 For any questions or issues, feel free to reach out!
 
